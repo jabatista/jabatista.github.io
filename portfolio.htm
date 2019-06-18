@@ -66,7 +66,8 @@
         div.job
         {
             margin-top: 1.5em;
-            margin-bottom: 4em;            
+            margin-bottom: 4em;
+	    clear: both;            
         }        
         div.job h3
         {
@@ -141,12 +142,43 @@
 <div class="section">
 
 <div class="job">
+<h2>University of Victoria Department of Chemistry<br />
+Programmer</h2>
+</p>
+
+<h3>Overview</h3>
+
+<p>
+<img alt="Microfluidic chip" src="Images/chip.png" align="right" width=150>
+Starting in March 2019, developed a computer vision application that monitors the production of polymer nanoparticles being studied as a new cancer treatment. The program performs in seconds a task which formerly required 30-60 minutes of a scientist's time.
+This serves to increase the rate at which experiments can be performed, and effectively permits the scientist
+to pursue more avenues in the course of research.
+</p>
+
+<img alt="Microfluidic channels" src="Images/channels.png" align="left" width=200 />
+
+
+<p>
+The software's purpose is to calculate the gas/liquid ratio
+present in a microfluidic chip, by volume. We take a movie of the fluid flow in the chip with a digital camera. Then,
+the software uses the image filters provided by Matlab to perform edge detection on the images and identify the boundaries of all gas bubbles. All of the boundaries in the movie are combined to obtain the silhouette of
+the channels in which the fluid flows (see fig. left). Once the program knows the channel dimensions, it calls a C++ routine to trace a ray along the major axis of the channel, dividing it into segments of light and dark. From these segments, we determine
+the positions of the channel loops and their radii. Once we know the positions of the channel loops, we can
+then map any given point along the curved channel onto a linear space. We measure the distance between these points
+to determine the length of each and every bubble, from which we determine the gas/liquid ratio.
+</p>
+
+<p>
+To deal with droplets or dust fibers in the optics, we employ a blemish detection algorithm which identifies stationary objects and marks them as holes in the image data. These holes are then filled with data points interpolated from neighboring known measurements.
+</p>
+
+<div class="job">
 <h2>APL Logistics, Menlo Worldwide<br />
 IT Support and Software Development</h2>
 
 <h3>Overview</h3>
 <p>
-   <img alt="Conveyor" src="Images/conveyor.jpg" align="left" />From 2005 to 2008, I held the role of primary IT resource at Thomson’s consumer electronics warehouse in Indianapolis, 
+   <img alt="Conveyor" src="Images/conveyor.jpg" align="left" />From 2005 to 2008, I held the role of programmer and IT technician at Thomson’s consumer electronics warehouse in Indianapolis, 
    including maintanence and further development of a previous project, &quot;WMS 
    Batch&quot;, detailed below. I formulated queries and developed reports for 
    billing, inventory, and productivity. Additionally, my responsibilities included tracking, prioritizing, troubleshooting and resolving problems  
@@ -158,8 +190,8 @@ At 900,000 ft<sup>2</sup> of floor space, the warehouse was Thomson’s largest
    site, including hardware, OS, and standard office/reporting applications, plus 
    network printers. Using Wavelink products, I configured and managed 450 wireless 
    portable computers located in Indianapolis, Toronto, California, and Mexico, 
-   sometimes applying my comprehension of written and spoken Spanish. I prepare custom labels in Zebra ZPL, 
-   for bulk printing. My responsibilities extend into networking and telephony. Finally, I provided server and control system support for 1.3 miles of automated pick-and-pass conveyor until April 2007, when Thomson sold the associated business.&nbsp;
+   sometimes applying my comprehension of written and spoken Spanish. I prepared custom labels in Zebra ZPL, 
+   for bulk printing. My responsibilities extended into networking and telephony. Finally, I provided server and control system support for 1.3 miles of automated pick-and-pass conveyor until April 2007, when Thomson sold the associated business.&nbsp;
 </p>
 
 <h3>Technologies Applied</h3>
@@ -173,9 +205,9 @@ At 900,000 ft<sup>2</sup> of floor space, the warehouse was Thomson’s largest
 <h3>Overview</h3>
 <p>
 <!-- img alt="Conveyor" src="Images/conveyor.jpg"  -->
-In 2002, I developed the WMS Batch application for Thomson Consumer Electronics, Inc. This program processes outgoing truckload shipments and is utilized by warehouse personnel at several sites. The program’s two basic functions can be 
+In 2002, I developed the WMS Batch application for Thomson Consumer Electronics, Inc. This program processed outgoing truckload shipments and was used by warehouse personnel at several sites. The program’s two basic functions can be 
    summarized as shipment verification and data collection. The program 
-   resides on handheld computers and, to promote speed and accuracy, most input is via the device’s integrated bar code reader.
+   resided on handheld computers and, to promote speed and accuracy, most input was via the device’s integrated bar code reader.
 </p>
 
 
@@ -193,31 +225,31 @@ NON-SCM(r)          DOMESTIC<br/>
 
 <h4>Shipment Accuracy Verification</h4>
 
-<p>Users utilize WMS Batch to verify the accuracy of shipments as each is staged on the warehouse floor prior to 
-   loading on the trailer. The details of a shipment are retrieved wirelessly from the 
-   Thomson&#39;s warehouse management system (Yantra WMS). WMS Batch then prompts the user to collect appropriate shipment data from product labeling, and it verifies that this matches the intended contents of the load. Verification consists, in part, of these items:</p>
+<p>Users used WMS Batch to verify the accuracy of shipments as each was staged on the warehouse floor prior to 
+   loading on the trailer. The details of a shipment were retrieved wirelessly from 
+   Thomson&#39;s warehouse management system (Yantra WMS). WMS Batch then prompted the user to collect appropriate shipment data from product labeling, and it verified that this matched the intended contents of the load. Verification consisted, in part, of these items:</p>
 
 <ul>
-<li>Serial numbers are verified to be unique and non-duplicated, reducing user error</li>
-<li>An automatic product recall search is performed in a remote Oracle database</li>
-<li>To help ensure order accuracy, PO numbers and product model numbers are verified to be correct for the order</li>
-<li>Product quantities are verified in order to avoid the cost associated with over or under-shipment</li>
+<li>Serial numbers were verified to be unique and non-duplicated, reducing user error</li>
+<li>An automatic product recall search was performed in a remote Oracle database</li>
+<li>To help ensure order accuracy, PO numbers and product model numbers were verified to be correct for the order</li>
+<li>Product quantities were verified in order to avoid the cost associated with over or under-shipment</li>
 </ul>
 
 <h4>Data Collection</h4>
-<p>In addition to shipment verification, the application simultaneously serves as a data collection tool. This data is uploaded to corporate servers for archival; for customer support and order-tracking services.</p>
+<p>In addition to shipment verification, the application simultaneously served as a data collection tool. This data was uploaded to corporate servers for archival; for customer support and order-tracking services.</p>
 
 <ul>
-<li>Serial numbers are collected from products such as satellite receivers. This allows Thomson to keep track of the destination of each individual unit, essential to warranty fulfillment and prevention of fraud and theft</li>
-<li>Product counts are uploaded to the existing Yantra WMS application. This serves as documentation of shipment contents and enables 
+<li>Serial numbers were collected from products such as satellite receivers. This allowed Thomson to keep track of the destination of each individual unit, essential to warranty fulfillment and prevention of fraud and theft</li>
+<li>Product counts were uploaded to the existing Yantra WMS application. This served as documentation of shipment contents and enabled 
    subsequent inventory, manifesting, and billing transactions</li>
 </ul>
 
 <h3>Details</h3>
 <p><img alt="Portable Terminal" src="Images/term.gif" align="left" height="90" 
-      width="60"/>I wrote WMS Batch in Visual C++ 1.52, and it runs on the DOS-based model PDT-7542 wireless handheld computer by Symbol Technologies 
-   (now Motorola). 802.11 wireless Ethernet allows raw TCP/IP communication with the “dumpstation”, a custom service 
-   which I programmed, running on a Windows NT PC. The dumpstation provides the interface between WMS Batch and Yantra WMS, an Oracle-based application running on an AIX server. As part of a subsequent project, I wrote the server-side Pro*C process which permits the DOS device to query the Oracle database for product recalls.</p>
+      width="60"/>I wrote WMS Batch in Visual C++ 1.52, and it ran on the DOS-based model PDT-7542 wireless handheld computer by Symbol Technologies 
+   (now Motorola). 802.11 wireless Ethernet allowed raw TCP/IP communication with the “dumpstation”, a custom service 
+   which I programmed, running on a Windows NT PC. The dumpstation provided the interface between WMS Batch and Yantra WMS, an Oracle-based application running on an AIX server. As part of a subsequent project, I wrote the server-side Pro*C process which permits the DOS device to query the Oracle database for product recalls.</p>
 
 <table>
    <tr>
